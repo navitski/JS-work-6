@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Родительский контроль</title>
+  </head>
+  <body>
+   <script>
+		function checkAge(){
+		    if (writeAge() > 18) {
+			  return true;
+			}
+			else {
+			  return confirm ('Родители разрешили?');
+			}
+		}
+		
+		function writeAge(){
+            return prompt('Ваш возраст?');
+        }	
+		
+		if (checkAge()) {
+		  alert('Доступ разрешен');
+		}
+		else {
+		  alert('В доступе отказано');
+		}
+	</script>
+  </body>
+ </html>

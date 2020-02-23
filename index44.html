@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<title>Найдем дискриминант</title>
+  </head>
+  <body>
+   <script>
+		var a = prompt('Введите переменную a:');
+        var b = prompt('Введите переменную b:');
+        var c = prompt('Введите переменную c:');
+		var discriminant = calcD(a, b, c);
+		if (isFinite(discriminant)) 
+		  alert('D=' + discriminant);
+        else  
+		  alert(discriminant);
+		
+		function calcD(a, b, c){
+                if (Number.isNaN(parseInt(a)) == true || Number.isNaN(parseInt(b)) == true || Number.isNaN(parseInt(c)) == true) 
+				  return 'Введены не числовые значения!';
+                else 
+				  return b * b - 4 * a * c;
+            }
+	</script>
+  </body>
+ </html>
