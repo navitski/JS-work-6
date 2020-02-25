@@ -1,29 +1,29 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
   <head>
 	<title>Родительский контроль</title>
   </head>
   <body>
    <script>
-		function checkAge(){
-		    if (writeAge() > 18) {
+		var x = prompt('Ваш возраст?');
+		if (isNaN(x)) {
+			alert('Введено не число!');
+			exit;
+        }
+		function checkAge(x){
+		    if (x > 18) {
 			  return true;
 			}
 			else {
 			  return confirm ('Родители разрешили?');
 			}
 		}
-		
-		function writeAge(){
-            return prompt('Ваш возраст?');
-        }	
-		
-		if (checkAge()) {
+		if (checkAge(x)) {
 		  alert('Доступ разрешен');
 		}
 		else {
 		  alert('В доступе отказано');
-		}
+		}		
 	</script>
   </body>
  </html>
