@@ -6,10 +6,15 @@
   <body>
    <script>
 		var x = prompt('Ваш возраст?');
-		if (isNaN(x) || x!==/^[0-9]+$/g) {
+		if (isNaN(x) || x.replace(/\s/g, '').length === 0) {
 			alert('Введено не число!');
 			exit;
         }
+		if (x > 200) {
+			alert('Столько не живут!');
+			exit;
+        }
+		
 		function checkAge(x){
 		    if (x > 18) {
 			  return true;
