@@ -6,7 +6,7 @@
   <body>
    <script>
 		var x = prompt('Ваш возраст?');
-		if (isNaN(x)) {
+		if (isNaN(x) || x!==/^[0-9]+$/g) {
 			alert('Введено не число!');
 			exit;
         }
@@ -27,3 +27,5 @@
 	</script>
   </body>
  </html>
+ 
+ 
