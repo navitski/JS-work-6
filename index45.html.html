@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>Родительский контроль</title>
+  </head>
+  <body>
+   <script>
+		var x = prompt('Ваш возраст?');
+		if (isNaN(x) || x.replace(/\s/g, '').length === 0) {
+			alert('Введено не число!');
+			exit;
+        }
+		if (x > 200 || x <= 0) {
+			alert('Столько не живут!');
+			exit;
+        }
+		
+		function checkAge(x){
+		    if (x > 18) {
+			  return true;
+			}
+			else {
+			  return confirm ('Родители разрешили?');
+			}
+		}
+		if (checkAge(x)) {
+		  alert('Доступ разрешен');
+		}
+		else {
+		  alert('В доступе отказано');
+		}		
+	</script>
+  </body>
+ </html>
